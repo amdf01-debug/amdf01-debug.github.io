@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://iota-v2-clone.vercel.app/sitemap.xml

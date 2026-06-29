@@ -1,0 +1,1 @@
+{"project":{},"exhibition":{},"artwork":{},"_note":"served empty on purpose — manual edits are baked into curated data by rebuild-data.mjs; this file only silences the bootEdits fetch (was a global 404)"}
