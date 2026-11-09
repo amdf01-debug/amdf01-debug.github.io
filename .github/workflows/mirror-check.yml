@@ -1,0 +1,22 @@
+name: Mirror check
+
+# Fails when the published tree contains editorial working notes, references to
+# images that are not shipped, or route shells that are out of date.
+# Fix locally with: node tools/build-mirror.mjs
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - run: node tools/build-mirror.mjs --check
